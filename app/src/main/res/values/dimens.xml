@@ -1,0 +1,46 @@
+<resources>
+    <!-- Padding màn hình và khoảng cách chuẩn Mockup -->
+    <dimen name="screen_padding_horizontal">20dp</dimen>
+    <dimen name="screen_padding_vertical">20dp</dimen>
+    <dimen name="card_spacing">14dp</dimen>
+    <dimen name="card_inner_padding">18dp</dimen>
+    <dimen name="spacing_tiny">4dp</dimen>
+    <dimen name="spacing_small">8dp</dimen>
+    <dimen name="spacing_medium">16dp</dimen>
+    <dimen name="spacing_large">24dp</dimen>
+
+    <!-- Bán kính bo góc (Corner Radii) -->
+    <dimen name="radius_large_card">28dp</dimen>   <!-- Thẻ lớn (Hero card), Bottom bar đỉnh -->
+    <dimen name="radius_medium_card">20dp</dimen>  <!-- Thẻ danh sách nhỏ, thẻ chi tiết -->
+    <dimen name="radius_input">16dp</dimen>        <!-- Ô nhập liệu, Spinner -->
+    <dimen name="radius_pill">100dp</dimen>        <!-- Nút pill tròn hoàn toàn -->
+    <dimen name="radius_dialog">24dp</dimen>       <!-- Hộp thoại AlertDialog -->
+
+    <!-- Độ nổi bóng mềm (Elevation) -->
+    <dimen name="elevation_soft">2dp</dimen>
+    <dimen name="elevation_hero">4dp</dimen>
+    <dimen name="elevation_bottom_bar">8dp</dimen>
+
+    <!-- Kích thước chữ theo Typeface Hierarchy -->
+    <dimen name="text_size_headline">24sp</dimen>
+    <dimen name="text_size_title">20sp</dimen>
+    <dimen name="text_size_card_title">15sp</dimen>
+    <dimen name="text_size_body">14sp</dimen>
+    <dimen name="text_size_caption">12sp</dimen>
+    <dimen name="text_size_tiny">11sp</dimen>
+
+    <!-- Chiều cao các nút và thanh công cụ -->
+    <dimen name="btn_pill_height">52dp</dimen>
+    <dimen name="btn_small_pill_height">38dp</dimen>
+    <dimen name="input_height">52dp</dimen>
+    <dimen name="bottom_bar_height">72dp</dimen>
+    <dimen name="bottom_fab_size">56dp</dimen>
+
+    <!-- Tương thích mã cũ -->
+    <dimen name="card_elevation">2dp</dimen>
+    <dimen name="card_corner_radius">20dp</dimen>
+    <dimen name="text_size_small">12sp</dimen>
+    <dimen name="text_size_medium">15sp</dimen>
+    <dimen name="text_size_large">18sp</dimen>
+    <dimen name="btn_height">52dp</dimen>
+</resources>

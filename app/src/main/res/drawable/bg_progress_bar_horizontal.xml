@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Nền thanh tiến độ (track) -->
+    <item android:id="@android:id/background">
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/radius_pill" />
+            <solid android:color="@color/peach_cream_dark" />
+        </shape>
+    </item>
+    <!-- Tiến độ (progress) -->
+    <item android:id="@android:id/progress">
+        <scale
+            android:scaleWidth="100%"
+            android:scaleGravity="left">
+            <shape android:shape="rectangle">
+                <corners android:radius="@dimen/radius_pill" />
+                <solid android:color="@color/amber_orange" />
+            </shape>
+        </scale>
+    </item>
+</layer-list>
+

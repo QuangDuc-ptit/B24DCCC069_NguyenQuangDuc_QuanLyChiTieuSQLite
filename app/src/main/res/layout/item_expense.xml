@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardExpenseContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    android:background="@drawable/bg_card_peach"
+    android:elevation="@dimen/elevation_soft"
+    android:foreground="?attr/selectableItemBackground"
+    android:orientation="vertical"
+    android:padding="@dimen/card_inner_padding">
+
+    <!-- Icon danh mục trong ô tròn/bo góc nhỏ -->
+    <FrameLayout
+        android:id="@+id/flCategoryIcon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/bg_input_rounded"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/ivCategoryIcon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/label_detail_category"
+            android:src="@drawable/ic_cat_food" />
+    </FrameLayout>
+
+    <!-- Tên khoản chi đậm -->
+    <TextView
+        android:id="@+id/tvExpenseName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_medium"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="@color/text_primary"
+        android:textSize="@dimen/text_size_card_title"
+        android:textStyle="bold" />
+
+    <!-- Số tiền -->
+    <TextView
+        android:id="@+id/tvExpenseAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_tiny"
+        android:textColor="@color/petrol_dark"
+        android:textSize="@dimen/text_size_body"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginVertical="@dimen/spacing_small"
+        android:background="#15000000" />
+
+    <!-- Danh mục và Ngày ở chân thẻ -->
+    <TextView
+        android:id="@+id/tvExpenseCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/text_secondary"
+        android:textSize="@dimen/text_size_tiny" />
+
+    <TextView
+        android:id="@+id/tvExpenseDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:textColor="@color/text_muted"
+        android:textSize="@dimen/text_size_tiny" />
+
+</LinearLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ExpenseManager">
+
+        <!-- LoginActivity là màn hình khởi động (Launcher) -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- MainActivity: Danh sách chi tiêu -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"
+            android:label="@string/title_main" />
+
+        <!-- AddEditExpenseActivity: Thêm / Sửa khoản chi -->
+        <activity
+            android:name=".AddEditExpenseActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- ExpenseDetailActivity: Chi tiết khoản chi -->
+        <activity
+            android:name=".ExpenseDetailActivity"
+            android:exported="false"
+            android:label="@string/title_expense_detail" />
+
+        <!-- StatisticsActivity: Thống kê -->
+        <activity
+            android:name=".StatisticsActivity"
+            android:exported="false"
+            android:label="@string/title_statistics" />
+
+    </application>
+
+</manifest>
+

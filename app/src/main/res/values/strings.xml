@@ -1,0 +1,85 @@
+<resources>
+    <string name="app_name">Quản lý chi tiêu</string>
+
+    <!-- Tiêu đề lớn phong cách Productive -->
+    <string name="headline_part1">Quản lý </string>
+    <string name="headline_part2">Chi tiêu</string>
+    <string name="login_greet_part1">Chào mừng </string>
+    <string name="login_greet_part2">bạn</string>
+
+    <!-- Đăng nhập -->
+    <string name="title_login">ĐĂNG NHẬP HỆ THỐNG</string>
+    <string name="login_card_subtitle">Đăng nhập để theo dõi và quản lý kế hoạch chi tiêu hiệu quả mỗi ngày</string>
+    <string name="hint_username">Tên đăng nhập</string>
+    <string name="hint_password">Mật khẩu</string>
+    <string name="btn_login">Đăng nhập</string>
+    <string name="err_empty_login">Vui lòng nhập đầy đủ tên đăng nhập và mật khẩu!</string>
+    <string name="err_wrong_login">Tên đăng nhập hoặc mật khẩu không chính xác!</string>
+
+    <!-- Màn hình chính -->
+    <string name="title_main">Danh sách chi tiêu</string>
+    <string name="main_hero_title">Kế hoạch chi tiêu</string>
+    <string name="main_hero_subtitle">Kế hoạch hôm nay gần hoàn thành</string>
+    <string name="hint_search">Tìm kiếm khoản chi...</string>
+    <string name="empty_list">Chưa có khoản chi nào</string>
+    <string name="btn_add_expense">Thêm khoản chi</string>
+    <string name="btn_statistics">Thống kê</string>
+    <string name="category_all">Tất cả danh mục</string>
+    <string name="format_total_summary">Tổng: %1$s (%2$d khoản chi)</string>
+    <string name="format_total_only">Tổng chi: %s</string>
+    <string name="format_count_only">%d khoản chi</string>
+
+    <!-- Danh mục -->
+    <string name="cat_food">Ăn uống</string>
+    <string name="cat_transport">Đi lại</string>
+    <string name="cat_study">Học tập</string>
+    <string name="cat_entertainment">Giải trí</string>
+    <string name="cat_other">Khác</string>
+
+    <!-- Thêm / Sửa -->
+    <string name="title_add_expense">Thêm khoản chi</string>
+    <string name="title_edit_expense">Sửa khoản chi</string>
+    <string name="calendar_header_title">Chọn ngày chi tiêu</string>
+    <string name="hint_expense_name">Tên khoản chi (*)</string>
+    <string name="hint_expense_amount">Số tiền (VNĐ) (*)</string>
+    <string name="label_category">Danh mục chi tiêu:</string>
+    <string name="label_date">Ngày chi tiêu:</string>
+    <string name="hint_expense_note">Ghi chú (không bắt buộc)</string>
+    <string name="btn_save_expense">Lưu khoản chi</string>
+    <string name="btn_update_expense">Cập nhật khoản chi</string>
+    <string name="err_empty_name">Tên khoản chi không được để trống!</string>
+    <string name="err_invalid_amount">Số tiền phải lớn hơn 0!</string>
+    <string name="err_future_date">Không được chọn ngày sau ngày hiện tại!</string>
+    <string name="msg_save_success">Đã lưu khoản chi thành công!</string>
+    <string name="msg_update_success">Đã cập nhật khoản chi thành công!</string>
+
+    <!-- Chi tiết -->
+    <string name="title_expense_detail">Chi tiết khoản chi</string>
+    <string name="label_detail_name">Tên:</string>
+    <string name="label_detail_amount">Số tiền:</string>
+    <string name="label_detail_category">Danh mục:</string>
+    <string name="label_detail_date">Ngày chi tiêu:</string>
+    <string name="label_detail_note">Ghi chú:</string>
+    <string name="text_none">Không có ghi chú</string>
+    <string name="btn_edit">Sửa khoản chi</string>
+    <string name="btn_back">Quay lại</string>
+    <string name="btn_delete">Xóa khoản chi</string>
+    <string name="dialog_delete_title">Xác nhận xóa</string>
+    <string name="dialog_delete_message">Bạn có chắc chắn muốn xóa khoản chi này khỏi cơ sở dữ liệu?</string>
+    <string name="dialog_btn_cancel">Hủy</string>
+    <string name="dialog_btn_delete">Xóa</string>
+    <string name="msg_delete_success">Đã xóa khoản chi thành công!</string>
+    <string name="err_not_found">Không tìm thấy dữ liệu khoản chi!</string>
+
+    <!-- Thống kê -->
+    <string name="title_statistics">Thống kê theo danh mục</string>
+    <string name="stat_card_title">Tổng chi tiêu toàn hệ thống</string>
+    <string name="format_total_expense">Tổng: %s</string>
+    <string name="format_stat_detail">%1$s (%2$d%%)</string>
+
+    <!-- Đăng xuất & Điều hướng Mockup -->
+    <string name="dialog_logout_title">Đăng xuất</string>
+    <string name="dialog_logout_message">Bạn có muốn đăng xuất khỏi tài khoản hiện tại?</string>
+    <string name="btn_logout_confirm">Đăng xuất</string>
+    <string name="toast_coming_soon">Tính năng sắp ra mắt trong phiên bản tiếp theo!</string>
+</resources>

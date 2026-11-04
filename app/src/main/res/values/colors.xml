@@ -1,0 +1,40 @@
+<resources>
+    <!-- Màu chủ đạo từ Mockup Productive -->
+    <color name="petrol_dark">#1F4E5F</color>       <!-- Xanh petrol đậm (thẻ lớn, nút phụ, chữ chính) -->
+    <color name="petrol_darker">#163A47</color>     <!-- Xanh petrol tối hơn cho điểm nhấn/shadow -->
+    <color name="petrol_track">#3F6E7F</color>      <!-- Track xám xanh cho vòng tròn tiến độ trên nền petrol -->
+    <color name="petrol_light">#EBF3F5</color>      <!-- Xanh petrol rất nhạt cho nền icon -->
+
+    <color name="amber_orange">#F5A94A</color>      <!-- Cam hổ phách (nút chính, vòng tiến độ, ngày chọn, nút +) -->
+    <color name="amber_orange_dark">#DE9032</color> <!-- Cam đậm khi nhấn (ripple/pressed) -->
+    <color name="amber_light">#FFF4E8</color>       <!-- Cam siêu nhạt cho viền / tag -->
+
+    <color name="peach_cream">#FDEBDD</color>       <!-- Kem đào ấm (thẻ nhỏ xen kẽ) -->
+    <color name="peach_cream_dark">#F5DAC4</color>  <!-- Kem đào đậm cho track tiến độ -->
+
+    <color name="screen_bg">#F7F8F9</color>         <!-- Nền màn hình chuẩn mockup -->
+    <color name="card_white">#FFFFFF</color>        <!-- Thẻ trắng xen kẽ -->
+    <color name="white">#FFFFFF</color>
+
+    <color name="text_primary">#1C2E35</color>      <!-- Chữ chính đậm -->
+    <color name="text_secondary">#8E9BA2</color>    <!-- Chữ phụ nhạt -->
+    <color name="text_muted">#A9A39B</color>        <!-- Chữ ghi chú xám ấm -->
+
+    <color name="error_rose">#E55353</color>        <!-- Đỏ dịu cho nút xóa / lỗi -->
+    <color name="error_bg">#FDECEC</color>          <!-- Nền đỏ dịu cho nút xóa -->
+
+    <color name="divider_soft">#EFEFEF</color>      <!-- Đường kẻ mờ -->
+    <color name="input_bg">#FFFFFF</color>          <!-- Nền ô nhập -->
+    <color name="input_stroke">#E2E7EA</color>      <!-- Viền ô nhập mềm -->
+
+    <!-- Tương thích mã cũ -->
+    <color name="primary">#1F4E5F</color>
+    <color name="primary_dark">#163A47</color>
+    <color name="accent">#F5A94A</color>
+    <color name="background">#F7F8F9</color>
+    <color name="card_background">#FFFFFF</color>
+    <color name="error_color">#E55353</color>
+    <color name="amount_color">#1F4E5F</color>
+    <color name="divider">#EFEFEF</color>
+    <color name="progress_secondary">#F5DAC4</color>
+</resources>

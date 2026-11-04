@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/screen_bg"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/screen_padding_horizontal"
+        android:paddingTop="36dp"
+        android:paddingBottom="@dimen/screen_padding_vertical">
+
+        <!-- Header: Nút quay lại tròn + Tiêu đề chi tiết -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_medium">
+
+            <FrameLayout
+                android:id="@+id/btnDetailHeaderBack"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/bg_input_rounded"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/btn_back"
+                    android:src="@drawable/ic_back" />
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/spacing_medium"
+                android:layout_toEndOf="@id/btnDetailHeaderBack"
+                android:text="@string/title_expense_detail"
+                android:textColor="@color/text_primary"
+                android:textSize="@dimen/text_size_headline"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <!-- 1. Thẻ xanh đậm chứa tên và số tiền lớn -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_large"
+            android:background="@drawable/bg_card_petrol"
+            android:elevation="@dimen/elevation_hero"
+            android:padding="@dimen/card_inner_padding">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvDetailName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_title"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvDetailAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_small"
+                    android:textColor="@color/amber_orange"
+                    android:textSize="@dimen/text_size_headline"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <!-- 2. Thẻ kem đào bo 20dp cho Danh mục, Ngày, Ghi chú kèm đường timeline cam -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_large"
+            android:background="@drawable/bg_card_peach"
+            android:elevation="@dimen/elevation_soft"
+            android:orientation="vertical"
+            android:padding="@dimen/card_inner_padding">
+
+            <!-- Danh mục -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <!-- Điểm tròn timeline cam -->
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:background="@drawable/bg_fab_center" />
+
+                <TextView
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_small"
+                    android:text="@string/label_detail_category"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="@dimen/text_size_body"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvDetailCategory"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/petrol_dark"
+                    android:textSize="@dimen/text_size_body"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Đường timeline cam mảnh kết nối -->
+            <View
+                android:layout_width="2dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="4dp"
+                android:background="@color/amber_orange" />
+
+            <!-- Ngày chi tiêu -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:background="@drawable/bg_fab_center" />
+
+                <TextView
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_small"
+                    android:text="@string/label_detail_date"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="@dimen/text_size_body"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvDetailDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/text_primary"
+                    android:textSize="@dimen/text_size_body" />
+            </LinearLayout>
+
+            <!-- Đường timeline cam mảnh kết nối -->
+            <View
+                android:layout_width="2dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="4dp"
+                android:background="@color/amber_orange" />
+
+            <!-- Ghi chú -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/bg_fab_center" />
+
+                <TextView
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_small"
+                    android:text="@string/label_detail_note"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="@dimen/text_size_body"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvDetailNote"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/text_primary"
+                    android:textSize="@dimen/text_size_body" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- 3. Bộ ba nút thao tác chuẩn phong cách Productive -->
+        <!-- Nút pill cam Sửa -->
+        <Button
+            android:id="@+id/btnEditExpense"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_pill_height"
+            android:layout_marginBottom="@dimen/spacing_small"
+            android:background="@drawable/bg_btn_amber_pill"
+            android:stateListAnimator="@null"
+            android:text="@string/btn_edit"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_body"
+            android:textStyle="bold"
+            app:backgroundTint="@null" />
+
+        <!-- Nút pill xanh đậm Quay lại -->
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_pill_height"
+            android:layout_marginBottom="@dimen/spacing_small"
+            android:background="@drawable/bg_btn_petrol_pill"
+            android:stateListAnimator="@null"
+            android:text="@string/btn_back"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_body"
+            android:textStyle="bold"
+            app:backgroundTint="@null" />
+
+        <!-- Nút pill kem chữ đỏ dịu Xóa -->
+        <Button
+            android:id="@+id/btnDeleteExpense"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_pill_height"
+            android:background="@drawable/bg_btn_delete_pill"
+            android:stateListAnimator="@null"
+            android:text="@string/btn_delete"
+            android:textAllCaps="false"
+            android:textColor="@color/error_rose"
+            android:textSize="@dimen/text_size_body"
+            android:textStyle="bold"
+            app:backgroundTint="@null" />
+
+    </LinearLayout>
+
+</ScrollView>

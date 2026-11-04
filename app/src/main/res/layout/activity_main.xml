@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/screen_bg">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/screen_padding_horizontal"
+            android:paddingTop="36dp"
+            android:paddingBottom="96dp">
+
+            <!-- 1. Header: Tiêu đề lớn + Icon góc phải đăng xuất -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_medium">
+
+                <TextView
+                    android:id="@+id/tvMainHeadline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:lineSpacingExtra="4dp"
+                    android:text="@string/title_main"
+                    android:textColor="@color/text_primary"
+                    android:textSize="@dimen/text_size_headline"
+                    android:textStyle="bold" />
+
+                <!-- Icon góc phải đăng xuất có xác nhận -->
+                <FrameLayout
+                    android:id="@+id/flLogout"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/bg_input_rounded"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/dialog_logout_title"
+                        android:src="@drawable/ic_logout" />
+                </FrameLayout>
+            </RelativeLayout>
+
+            <!-- 2. Thẻ lớn xanh đậm Hero Card phong cách Productive -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_large"
+                android:background="@drawable/bg_card_petrol"
+                android:elevation="@dimen/elevation_hero"
+                android:padding="@dimen/card_inner_padding">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/main_hero_title"
+                            android:textColor="@color/petrol_light"
+                            android:textSize="@dimen/text_size_caption" />
+
+                        <TextView
+                            android:id="@+id/tvTotalSummary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:lineSpacingExtra="3dp"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_size_title"
+                            android:textStyle="bold" />
+
+                        <!-- Nút Thống kê pill cam nhỏ (View Task style) -->
+                        <Button
+                            android:id="@+id/btnStatistics"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/btn_small_pill_height"
+                            android:layout_marginTop="@dimen/spacing_medium"
+                            android:background="@drawable/bg_btn_amber_pill"
+                            android:paddingHorizontal="@dimen/spacing_large"
+                            android:stateListAnimator="@null"
+                            android:text="@string/btn_statistics"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_size_caption"
+                            android:textStyle="bold"
+                            app:backgroundTint="@null" />
+                    </LinearLayout>
+
+                    <!-- Vòng tròn tiến độ Canvas -->
+                    <com.example.expensemanager.view.CircularProgressView
+                        android:id="@+id/cpvMainRatio"
+                        android:layout_width="82dp"
+                        android:layout_height="82dp"
+                        android:layout_marginStart="@dimen/spacing_small" />
+                </LinearLayout>
+            </FrameLayout>
+
+            <!-- 3. Thanh tìm kiếm & lọc danh mục kiểu pill -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_medium"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/etSearch"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/input_height"
+                    android:layout_marginEnd="@dimen/spacing_small"
+                    android:layout_weight="1.3"
+                    android:background="@drawable/bg_input_rounded"
+                    android:drawableStart="@android:drawable/ic_menu_search"
+                    android:drawablePadding="@dimen/spacing_small"
+                    android:hint="@string/hint_search"
+                    android:inputType="text"
+                    android:paddingHorizontal="@dimen/spacing_medium"
+                    android:textColor="@color/text_primary"
+                    android:textColorHint="@color/text_muted"
+                    android:textSize="@dimen/text_size_caption" />
+
+                <Spinner
+                    android:id="@+id/spCategoryFilter"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/input_height"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_input_rounded"
+                    android:paddingHorizontal="@dimen/spacing_tiny" />
+            </LinearLayout>
+
+            <!-- 4. Tiêu đề danh sách (Today's Schedule style) -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_small"
+                android:text="@string/title_main"
+                android:textColor="@color/text_primary"
+                android:textSize="@dimen/text_size_title"
+                android:textStyle="bold" />
+
+            <!-- 5. Danh sách khoản chi 2 cột xen kẽ -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="180dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvExpenses"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false" />
+
+                <!-- Trạng thái danh sách rỗng kèm icon -->
+                <LinearLayout
+                    android:id="@+id/llEmptyState"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_large"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:contentDescription="@string/empty_list"
+                        android:src="@drawable/ic_empty_box" />
+
+                    <TextView
+                        android:id="@+id/tvEmptyList"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_small"
+                        android:text="@string/empty_list"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="@dimen/text_size_body" />
+                </LinearLayout>
+            </FrameLayout>
+
+            <!-- 6. Nút Thêm khoản chi pill cam theo đề -->
+            <Button
+                android:id="@+id/btnAddExpense"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/btn_pill_height"
+                android:layout_marginTop="@dimen/spacing_large"
+                android:background="@drawable/bg_btn_amber_pill"
+                android:stateListAnimator="@null"
+                android:text="@string/btn_add_expense"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_body"
+                android:textStyle="bold"
+                app:backgroundTint="@null" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- 7. Bottom Navigation Bar tự vẽ 5 icon cố định ở đáy -->
+    <include
+        layout="@layout/layout_bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

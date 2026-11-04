@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/screen_bg"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/screen_padding_horizontal"
+        android:paddingTop="36dp"
+        android:paddingBottom="@dimen/screen_padding_vertical">
+
+        <!-- Thanh tiêu đề có nút quay lại tròn phong cách Mockup -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_medium">
+
+            <FrameLayout
+                android:id="@+id/btnHeaderBack"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/bg_input_rounded"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/btn_back"
+                    android:src="@drawable/ic_back" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tvFormTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/spacing_medium"
+                android:layout_toEndOf="@id/btnHeaderBack"
+                android:textColor="@color/text_primary"
+                android:textSize="@dimen/text_size_headline"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <!-- Thẻ xanh đậm chứa chọn ngày (giống nửa trên mockup điện thoại bên phải) -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_large"
+            android:background="@drawable/bg_card_petrol"
+            android:elevation="@dimen/elevation_hero"
+            android:padding="@dimen/card_inner_padding">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_small"
+                    android:text="@string/calendar_header_title"
+                    android:textColor="@color/amber_orange"
+                    android:textSize="@dimen/text_size_card_title"
+                    android:textStyle="bold" />
+
+                <!-- DatePicker ngày chi tiêu (tối đa là hôm nay) -->
+                <DatePicker
+                    android:id="@+id/dpExpenseDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:calendarTextColor="@color/white"
+                    android:calendarViewShown="false"
+                    android:datePickerMode="spinner"
+                    android:theme="@style/ThemeOverlay.MaterialComponents.Dark" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <!-- Thẻ trắng chứa các ô nhập bo 16dp -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_large"
+            app:cardBackgroundColor="@color/card_white"
+            app:cardCornerRadius="@dimen/radius_medium_card"
+            app:cardElevation="@dimen/elevation_soft">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/card_inner_padding">
+
+                <!-- Tên khoản chi -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hint_expense_name"
+                    android:textColor="@color/text_primary"
+                    android:textSize="@dimen/text_size_caption"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/etExpenseName"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/input_height"
+                    android:layout_marginTop="@dimen/spacing_tiny"
+                    android:layout_marginBottom="@dimen/spacing_medium"
+                    android:background="@drawable/bg_input_rounded"
+                    android:hint="@string/hint_expense_name"
+                    android:inputType="textCapSentences"
+                    android:paddingHorizontal="@dimen/spacing_medium"
+                    android:textColor="@color/text_primary"
+                    android:textColorHint="@color/text_muted"
+                    android:textSize="@dimen/text_size_body" />
+
+                <!-- Số tiền -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hint_expense_amount"
+                    android:textColor="@color/text_primary"
+                    android:textSize="@dimen/text_size_caption"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/etExpenseAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/input_height"
+                    android:layout_marginTop="@dimen/spacing_tiny"
+                    android:layout_marginBottom="@dimen/spacing_medium"
+                    android:background="@drawable/bg_input_rounded"
+                    android:hint="@string/hint_expense_amount"
+                    android:inputType="number"
+                    android:paddingHorizontal="@dimen/spacing_medium"
+                    android:textColor="@color/text_primary"
+                    android:textColorHint="@color/text_muted"
+                    android:textSize="@dimen/text_size_body" />
+
+                <!-- Danh mục -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_category"
+                    android:textColor="@color/text_primary"
+                    android:textSize="@dimen/text_size_caption"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/spCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/input_height"
+                    android:layout_marginTop="@dimen/spacing_tiny"
+                    android:layout_marginBottom="@dimen/spacing_medium"
+                    android:background="@drawable/bg_input_rounded"
+                    android:paddingHorizontal="@dimen/spacing_small" />
+
+                <!-- Ghi chú -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hint_expense_note"
+                    android:textColor="@color/text_primary"
+                    android:textSize="@dimen/text_size_caption"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/etExpenseNote"
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:layout_marginTop="@dimen/spacing_tiny"
+                    android:background="@drawable/bg_input_rounded"
+                    android:gravity="top|start"
+                    android:hint="@string/hint_expense_note"
+                    android:inputType="textMultiLine"
+                    android:padding="@dimen/spacing_medium"
+                    android:textColor="@color/text_primary"
+                    android:textColorHint="@color/text_muted"
+                    android:textSize="@dimen/text_size_body" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Nút pill cam to "Lưu khoản chi" / "Cập nhật khoản chi" (kiểu Set Reminder) -->
+        <Button
+            android:id="@+id/btnSaveExpense"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_pill_height"
+            android:background="@drawable/bg_btn_amber_pill"
+            android:stateListAnimator="@null"
+            android:text="@string/btn_save_expense"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_body"
+            android:textStyle="bold"
+            app:backgroundTint="@null" />
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bottomNavigationContainer"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/bottom_bar_height"
+    android:background="@drawable/bg_bottom_bar"
+    android:elevation="@dimen/elevation_bottom_bar"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingHorizontal="@dimen/spacing_medium">
+
+    <!-- 1. Trang chủ (Home) -->
+    <LinearLayout
+        android:id="@+id/navHome"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ivNavHome"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:contentDescription="@string/title_main"
+            android:src="@drawable/ic_home" />
+
+        <View
+            android:id="@+id/dotNavHome"
+            android:layout_width="4dp"
+            android:layout_height="4dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/bg_btn_petrol_pill"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <!-- 2. Lịch (Calendar) -->
+    <LinearLayout
+        android:id="@+id/navCalendar"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ivNavCalendar"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:contentDescription="@string/toast_coming_soon"
+            android:src="@drawable/ic_calendar" />
+
+        <View
+            android:id="@+id/dotNavCalendar"
+            android:layout_width="4dp"
+            android:layout_height="4dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/bg_btn_petrol_pill"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+    <!-- 3. Nút Thêm '+' ở giữa (FAB phong cách Mockup) -->
+    <FrameLayout
+        android:id="@+id/navAdd"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.2"
+        android:clickable="true"
+        android:focusable="true">
+
+        <ImageView
+            android:id="@+id/ivNavAdd"
+            android:layout_width="@dimen/bottom_fab_size"
+            android:layout_height="@dimen/bottom_fab_size"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_fab_center"
+            android:contentDescription="@string/btn_add_expense"
+            android:padding="14dp"
+            android:src="@drawable/ic_add" />
+    </FrameLayout>
+
+    <!-- 4. Thống kê (Statistics) -->
+    <LinearLayout
+        android:id="@+id/navStatistics"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ivNavStatistics"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:contentDescription="@string/title_statistics"
+            android:src="@drawable/ic_statistics" />
+
+        <View
+            android:id="@+id/dotNavStatistics"
+            android:layout_width="4dp"
+            android:layout_height="4dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/bg_btn_petrol_pill"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+    <!-- 5. Hồ sơ (Profile) -->
+    <LinearLayout
+        android:id="@+id/navProfile"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ivNavProfile"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:contentDescription="@string/toast_coming_soon"
+            android:src="@drawable/ic_profile" />
+
+        <View
+            android:id="@+id/dotNavProfile"
+            android:layout_width="4dp"
+            android:layout_height="4dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/bg_btn_petrol_pill"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+</LinearLayout>
+
